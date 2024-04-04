@@ -1,0 +1,24 @@
+article{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4em;
+    place-items: center;
+}
+.example{
+    height: 20em;
+    width: 20rem;
+    background: #d11b1b;
+}
+.example2{
+    height: 20em;
+    width: 20rem;
+    background: #1bd1c2;
+}
+.grid-col-span2{
+    height: 10em;
+    width: 10rem;
+    background-color: rgb(0, 157, 255)!important;
+    grid-column-start: 1;
+    grid-row-start:2;
+    grid-column: span 1;
+}

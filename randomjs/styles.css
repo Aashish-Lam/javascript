@@ -1,0 +1,27 @@
+body{
+ background-color: aqua; 
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+.game>div{
+    padding: 2em;
+    margin: 1em;
+}
+input{
+    border-radius: 50px;
+    background-color: rgb(238, 245, 239);
+    padding: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button{
+    border-radius: 50px;
+    background-color: rgb(217, 200, 14);
+    padding: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}

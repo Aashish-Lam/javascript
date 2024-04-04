@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="game">
+        <div>
+            <label for="random">Radnom number between 0 to 100</label>
+        </div>
+            <input type="text" name="generate" id="generate">
+        </div>
+        <div>
+        <button type="button" onclick="guess()">Guess the value</button>
+        <button type="button" onclick="refresh()">New random Value</button>
+    </div>
+        <p id="ResultText"></p>
+    </main>
+<script src="random.js"></script>
+</body>
+</html>
