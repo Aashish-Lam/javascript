@@ -1,0 +1,51 @@
+*{
+    color: hotpink;
+}
+/* attribute type selector */
+[data-type='primary']{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+/*class selector*/
+.firstof p:first-of-type {
+   
+    font-size: larger;
+}
+/*type selector*/
+p{
+    display:  inline;
+}
+#rad{
+    height: min-content;
+    width: min-content;
+    border: 2px solid gray;
+}
+/* A href that contains "example.com" */
+[href*='example.np'] {
+    color: red;
+  }
+  
+  /* A href that starts with https */
+  [href^='https'] {
+    color: green;
+  }
+  
+  /* A href that ends with .com */
+  [href$='.com'] {
+    color: blue;
+  }
+/* :scope yesto chai pseudo class  */
+p:nth-child(even), p:nth-child(odd):hover{
+    color: black;
+}
+/* ::after pseudo elemet  they act as if they are inserting a new element with CSS */
+::selection{
+    background: rgb(252, 142, 142);
+    color: rgb(201, 254, 254);
+
+}
+/* ()b descendent combinator is space p bhitra ko strong *
+*/
+p strong{
+    font-size: larger;
+}
