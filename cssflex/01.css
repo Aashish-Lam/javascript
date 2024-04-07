@@ -29,6 +29,32 @@ ul{
     height: 100%;
    }
 .hero{
-    height: 40rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30rem;
+    background: #36b3d9;
+}
+.herotext{
+    text-align: center;
+}
+img{
+    height: 200px;
+    width: 200px;
+    border-radius: 10em;
+}
+.footer{
+    background-color: rgb(84, 161, 228);
+    display: flex;   
+    justify-content: space-between;
     
+}
+.footercontainer{
+    padding: 2cqb;
+    height: 11em;
+    border-radius: 1em;
+    margin-bottom: 0;
+  
+    background: #7edada;
+
 }
