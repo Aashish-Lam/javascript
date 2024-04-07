@@ -1,0 +1,34 @@
+*{
+   margin: 0;
+   padding: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+.navbar{
+
+    height: 4em;
+    background-color: rgb(24, 105, 220);
+}
+.logo{
+    padding: 1em;
+    font-size: x-large;
+    font-weight: bold;
+   
+}
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap:  2em;
+    margin-right: 2em;
+    margin-top: 1em;
+    height: 100%;
+   }
+.hero{
+    height: 40rem;
+    
+}
