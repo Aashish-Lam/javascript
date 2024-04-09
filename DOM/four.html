@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 | Chia or code</title>
+</head>
+<body>
+    <ul class="language">
+        <li>hava</li>
+     
+    </ul>
+</body>
+<script>
+    //add
+    function addLanguage(langname){
+        
+        let li=document.createElement('li')
+        li.innerHTML=`${langname}`
+        document.querySelector('ul').appendChild(li)
+    }
+    addLanguage('python')
+    addLanguage('nepali')
+    function addpotimizization(langname){
+        let li=document.createElement('li') 
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    }
+    addpotimizization('golang')
+    addpotimizization('golang2')
+    //edit
+  const secondLang=  document.querySelector("li:nth-child(3)")
+  let newli=document.createElement('li') 
+  newli.appendChild(document.createTextNode("mojo"))
+  secondLang.replaceWith(newli)
+  //remove
+
+  const rl=document.querySelector("li:last-child")
+  rl.remove()
+  
+
+</script>
+</html>
