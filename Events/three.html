@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Chai aur code</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+<script>
+    let intervalId;
+
+    const title = document.getElementById("title");
+
+    document.getElementById("start").addEventListener('click', () => {
+        const sayHi = function() {
+            intervalId = setInterval(() => {
+                console.log("hi");
+            }, 1000);
+            console.log(intervalId);
+        };
+        sayHi();
+    });
+
+    document.getElementById("stop").addEventListener('click', () => {
+        clearInterval(intervalId);
+    });
+</script>
+</html>

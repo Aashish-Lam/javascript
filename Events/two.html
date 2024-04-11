@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set setTimeout</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title"> Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+ 
+//   btn.addEventListener('click',)
+ const st= setTimeout(mygr,4100)
+  function mygr(){
+        document.getElementById('title').innerText='Happy Birthday! ASH'
+    }
+
+  const btn=  document.getElementById('stop').addEventListener('click', function(){
+    clearTimeout(st)
+  })
+</script>
+</html>

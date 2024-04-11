@@ -29,15 +29,15 @@
 //     alert("k cha")
 //    }
 //   addeventlistener le propogotion dicnha
-   let images= document.getElementById('images').addEventListener("click",function(e){
-    alert("clicked inside the ul")
+//    let images= document.getElementById('images').addEventListener("click",function(e){
+//     alert("clicked inside the ul")
     
-   },false)
+//    },false)
 
-   let owl= document.getElementById('owl').addEventListener("click",function(e){
-    alert("owl clicked")
-    e.stopPropagation()
-   },false)
+//    let owl= document.getElementById('owl').addEventListener("click",function(e){
+//     alert("owl clicked")
+//     e.stopPropagation()
+//    },false)
 
 //    //  bubling up is false and true is  capturing
 //    //bubling up bottom to top and capturing top to bottom
@@ -49,11 +49,11 @@
 //target , toElement,srcElement, currentTarget
 //clientX , clientY, screenX, screenY
 //altkey , crlkey, shifykey, keyCode
-document.querySelector("#google").addEventListener('click',(e)=>{
+// document.querySelector("#google").addEventListener('click',(e)=>{
+// // e.preventDefault()
 // e.preventDefault()
-e.preventDefault()
-e.stopPropagation()
-})
+// e.stopPropagation()
+// })
 document.querySelector('#images').addEventListener('click', function(e){
     console.log(e)
         let result= e.target.parentNode;
