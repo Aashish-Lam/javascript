@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+    <style>
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+//    let owl= document.getElementById('owl');
+//    owl.onclick=function(){
+//     alert("k cha")
+//    }
+//   addeventlistener le propogotion dicnha
+   let images= document.getElementById('images').addEventListener("click",function(e){
+    alert("clicked inside the ul")
+    
+   },false)
+
+   let owl= document.getElementById('owl').addEventListener("click",function(e){
+    alert("owl clicked")
+    e.stopPropagation()
+   },false)
+
+//    //  bubling up is false and true is  capturing
+//    //bubling up bottom to top and capturing top to bottom
+  
+//attachEvent()
+//jQuery - on 
+//must study
+//type, timedtamp, defaultPrevented 
+//target , toElement,srcElement, currentTarget
+//clientX , clientY, screenX, screenY
+//altkey , crlkey, shifykey, keyCode
+document.querySelector("#google").addEventListener('click',(e)=>{
+// e.preventDefault()
+e.preventDefault()
+e.stopPropagation()
+})
+document.querySelector('#images').addEventListener('click', function(e){
+    console.log(e)
+        let result= e.target.parentNode;
+        // result.remove()
+        // result.parentNode
+        if(e.target.tagName==='IMG'){
+            result.remove()
+        }
+    })
+</script>
