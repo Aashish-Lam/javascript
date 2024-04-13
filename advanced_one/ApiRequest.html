@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background-color: rgb(84, 72, 72);">
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" id="countryImage" src="" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title" id="countryName">Card title</h5>
+        <p class="card-text" id="countryInfo">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+
+<script>
+    const requrl='https://restcountries.com/v3.1/all'
+    const xhr= new XMLHttpRequest();
+    xhr.open('GET', requrl)
+    xhr.onreadystatechange= function(){
+        if( xhr.readyState === 4 && xhr.status === 200)
+        {   
+            const data = JSON.parse(this.responseText);
+            console.log(data);
+            // Assuming the first country in the response
+            const firstCountry = data[249];
+            document.getElementById('countryName').textContent = firstCountry.name.common;
+            document.getElementById('countryInfo').textContent = `Population: ${firstCountry.population}`;
+            document.getElementById('countryImage').src = firstCountry.flags.svg;
+        }
+        else if (xhr.readyState === 4) {
+            console.error('Error fetching data');
+        }
+    }
+    xhr.send()
+</script>
+</body>
+</html>
