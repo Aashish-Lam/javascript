@@ -83,5 +83,3 @@ async function consumepromiseFive(){
   const response = await promisefive
     console.log (response)
 }
-consumepromiseFive()
-  
