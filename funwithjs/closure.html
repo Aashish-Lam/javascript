@@ -1,0 +1,65 @@
+<!-- lexical scoping and closures -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunwithJs</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // function outer(){
+    //     let username= "hitesh"
+    //     function inner(){
+    //         let secret="123"
+    //     console.log("inner",username) }
+    //     inner();
+    //     inner2()
+    //     function inner2(){
+    //         console.log("inner2",username)
+    //         // console.log("inner2",secret)
+    //     }
+    // }
+    // outer();
+    // // console.log("outer",username)
+    // function makefunc(){
+    //     const name="mozilla";
+    //     function displayName(){
+    //         let a='ash'
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+    // const myFunc = makefunc();
+    // c
+    // myFunc();
+       let Orange= document.querySelector('#orange')
+       let Green= document.querySelector('#green')
+       console.log(Orange)
+       console.log(Green)
+    //    Orange.addEventListener('click',()=>{
+    //     console.log('butoon1')
+    //     document.body.style.backgroundColor="orange";
+    //    })
+    //    Green.addEventListener('click',()=>{
+    //     console.log('butoon2')
+    //     document.body.style.backgroundColor="green";
+    //    })
+       function clickHandler(color){
+        return ()=>{
+    document.body.style.backgroundColor=`${color}`;
+        }
+       }
+            function clickHandler(color){
+        return ()=>{
+    document.body.style.backgroundColor=`${color}`;
+        }
+       }
+       document.getElementById('orange').onclick =clickHandler('Orange')
+       document.getElementById('green').onclick =clickHandler('green')
+</script>
+</html>
